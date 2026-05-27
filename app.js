@@ -16,7 +16,7 @@ app.use(cors({
   origin: [
     'http://127.0.0.1:5500',
     'http://localhost:5500',
-    'https://ton-frontend.netlify.app' // ← à mettre à jour après Netlify
+    'https://red-product-final.netlify.app' // 
   ]
 }));
 app.use(express.json({ limit: '10mb' }));        
