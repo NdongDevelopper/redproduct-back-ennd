@@ -16,11 +16,13 @@ app.use(cors({
   origin: [
     'http://127.0.0.1:5500',
     'http://localhost:5500',
-    'https://red-product-final.netlify.app' // 
-  ]
+    'https://red-product-final.netlify.app'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
-app.use(express.json({ limit: '10mb' }));        
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/auth', require('./src/routes/authRoutes'));
